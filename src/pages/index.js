@@ -36,14 +36,14 @@ const Home = () => {
 
   if (loading)
     return (
-      <div className="min-h-screen h-full absolute top-2/4 left-2/4 -mt-10 -ml-10">
+      <div className="absolute top-2/4 left-2/4 -mt-10 -ml-10">
         <h2 className="text-2xl text-center font-semibold">Loading..</h2>
       </div>
     );
 
   if (error)
     return (
-      <div className="min-h-screen h-full absolute top-2/4 left-2/4 -mt-10 -ml-10">
+      <div className="absolute top-2/4 left-2/4 -mt-10 -ml-40">
         <h2 className="text-2xl text-center font-semibold">
           Oops, Something went wrong! <br /> Please Try Again Later!..
         </h2>
@@ -77,17 +77,21 @@ const Home = () => {
                   key={todo.id}
                   className="mt-3 h-15 border shadow-sm hover:shadow-md cursor-pointer transition-all duration-500 ease-in-out p-3 flex items-center justify-between"
                 >
-                  <p className={`${todo.isCompleted ? "line-through" : ""}`}>
+                  <p className={todo.isCompleted ? "line-through" : ""}>
                     {todo.task}
                   </p>
                   <p>
                     {todo.isCompleted ? (
                       <IoCheckmarkDoneCircleSharp
                         onClick={() => handleDone(todo)}
+                        className="text-green-600 text-xl"
+                        title="Completed"
                       />
                     ) : (
                       <IoCheckmarkDoneCircleOutline
                         onClick={() => handleDone(todo)}
+                        className="text-red-600 text-xl"
+                        title="Not Completed"
                       />
                     )}
                   </p>
