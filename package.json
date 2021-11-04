@@ -15,8 +15,17 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@apollo/client": "^3.1.5",
+    "cross-fetch": "^3.0.6",
     "gatsby": "^4.1.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "gatsby-plugin-postcss": "^5.1.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
   }
 }
