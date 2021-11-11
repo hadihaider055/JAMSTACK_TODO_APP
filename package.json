@@ -16,8 +16,11 @@
   },
   "dependencies": {
     "@apollo/client": "^3.1.5",
+    "apollo-server-lambda": "^3.5.0",
     "cross-fetch": "^3.0.6",
+    "faunadb": "^4.4.1",
     "gatsby": "^4.1.0",
+    "graphql-tag": "^2.12.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.3.1"
