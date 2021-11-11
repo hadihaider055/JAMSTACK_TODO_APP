@@ -84,4 +84,14 @@ const server = new ApolloServer({
   resolvers,
 });
 
-exports.handler = server.createHandler();
+const apolloHandler = server.createHandler();
+exports.handler = (event, context, ...args) => {
+  return apolloHandler(
+    {
+      ...event,
+      requestContext: context,
+    },
+    context,
+    ...args
+  );
+};
